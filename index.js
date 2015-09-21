@@ -45,7 +45,7 @@ function tweetInfix() {
           //found an -ing verb
           verb = (verbSet[i].word).toLowerCase();
           //let's lowercase it
-          var unSep = new RegExp('^un', i);
+          var unSep = new RegExp('^[uU]n');
           //regex to find the 'un' part
           var outfix = unWords.pick();
           // let's pick an un- word to infix
