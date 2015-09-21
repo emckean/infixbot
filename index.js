@@ -45,7 +45,7 @@ function tweetInfix() {
           //found an -ing verb
           verb = (verbSet[i].word).toLowerCase();
           //let's lowercase it
-          var unSep = new RegExp('^un');
+          var unSep = new RegExp('^un', i);
           //regex to find the 'un' part
           var outfix = unWords.pick();
           // let's pick an un- word to infix
@@ -77,20 +77,7 @@ function tweetInfix() {
 
     });
     
-    // console.log("here's " + myTweet);
-    // if (!wordfilter.blacklisted(myTweet)) {
-    //   console.log(myTweet);
-      
-    //   T.post('statuses/update', { status: myTweet }, function(err, reply) {
-    //     if (err) {
-    //       console.log('error:', err);
-    //     }
-    //     else {
-    //       console.log('tweet:', reply);
-    //     }
-    //   });
-      
-    // }
+
  }   
 
 // Tweet every 60 minutes
